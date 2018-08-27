@@ -1,17 +1,53 @@
 import java.util.Scanner;
 public class forLoops
 	{
-
+		static Scanner userInput= new Scanner(System.in);
 		public static void main(String[] args)
 			{
-//				doChallengeOne();
-//				doChallengeTwo();
-//				doChallengeThree();
-//				doChallengeFour();
-//				doChallengeFive();
-//				doChallengeSix();
-//				doChallengeSeven();
-				doChallengeEight();
+				System.out.println("Which Challenge would you like to run? (Type the number)");
+				int userChoice=userInput.nextInt();
+				switch(userChoice)
+				{
+					case 1:
+						doChallengeOne();
+						break;
+					case 2:
+						doChallengeTwo();
+						break;
+					case 3:
+						doChallengeTwo();
+						break;
+					case 4:
+						doChallengeFour();
+						break;
+					case 5:
+						doChallengeFive();
+						break;
+					case 6:
+						doChallengeSix();
+						break;
+					case 7:
+						doChallengeSeven();
+						break;
+					case 8:
+						doChallengeEight();
+						break;
+					default:
+						doChallenge1();
+						break;
+				}
+
+
+
+
+
+
+
+			}
+		private static void doChallenge1()
+			{
+				// TODO Auto-generated method stub
+				
 			}
 		public static void doChallengeOne()
 		{
@@ -54,7 +90,7 @@ public class forLoops
 		}
 		public static void doChallengeSix()
 		{
-			Scanner userInput= new Scanner(System.in);
+	
 			System.out.println("I will add up all numbers bewteen the bounds of your choice.");
 			System.out.println("First, give me a lower bound.");
 			int lowerBound=userInput.nextInt();
@@ -71,7 +107,6 @@ public class forLoops
 		}
 		public static void doChallengeSeven()
 		{
-			Scanner userInput= new Scanner(System.in);
 			System.out.println("I will add up all numbers bewteen the bounds of your choice but ONLY if they are divisible by three.");
 			System.out.println("First, give me a lower bound.");
 			int lowerBound=userInput.nextInt();
