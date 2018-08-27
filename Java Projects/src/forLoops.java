@@ -10,7 +10,8 @@ public class forLoops
 //				doChallengeFour();
 //				doChallengeFive();
 //				doChallengeSix();
-				doChallengeSeven();
+//				doChallengeSeven();
+				doChallengeEight();
 			}
 		public static void doChallengeOne()
 		{
@@ -82,10 +83,19 @@ public class forLoops
 				{
 					if(lowerBound%3==0)
 						{
-					finalNumber=lowerBound+finalNumber;
+						finalNumber=lowerBound+finalNumber;
 						}
 				}
 			System.out.println(finalNumber);
+		}
+		public static void doChallengeEight()
+		{
+			System.out.println("*********");
+			for(int i=0; i<9; i++)
+				{
+					System.out.println("*       *");
+				}
+			System.out.println("*********");
 		}
 		
 
