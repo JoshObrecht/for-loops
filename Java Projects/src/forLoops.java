@@ -4,11 +4,13 @@ public class forLoops
 
 		public static void main(String[] args)
 			{
-				doChallengeOne();
-				doChallengeTwo();
-				doChallengeThree();
-				doChallengeFour();
-				doChallengeFive();
+//				doChallengeOne();
+//				doChallengeTwo();
+//				doChallengeThree();
+//				doChallengeFour();
+//				doChallengeFive();
+//				doChallengeSix();
+				doChallengeSeven();
 			}
 		public static void doChallengeOne()
 		{
@@ -52,7 +54,38 @@ public class forLoops
 		public static void doChallengeSix()
 		{
 			Scanner userInput= new Scanner(System.in);
-			System.out.println("");
+			System.out.println("I will add up all numbers bewteen the bounds of your choice.");
+			System.out.println("First, give me a lower bound.");
+			int lowerBound=userInput.nextInt();
+			System.out.println("Next, give me an upper bound.");
+			int upperBound=userInput.nextInt();
+			int finalNumber=0;
+			
+			for(;lowerBound<=upperBound; lowerBound++)
+				{
+					finalNumber=lowerBound+finalNumber;
+				}
+			System.out.println(finalNumber);
+			
+		}
+		public static void doChallengeSeven()
+		{
+			Scanner userInput= new Scanner(System.in);
+			System.out.println("I will add up all numbers bewteen the bounds of your choice but ONLY if they are divisible by three.");
+			System.out.println("First, give me a lower bound.");
+			int lowerBound=userInput.nextInt();
+			System.out.println("Next, give me an upper bound.");
+			int upperBound=userInput.nextInt();
+			int finalNumber=0;
+			
+			for(;lowerBound<=upperBound; lowerBound++)
+				{
+					if(lowerBound%3==0)
+						{
+					finalNumber=lowerBound+finalNumber;
+						}
+				}
+			System.out.println(finalNumber);
 		}
 		
 
