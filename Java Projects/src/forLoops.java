@@ -1,10 +1,14 @@
 import java.util.Scanner;
 public class forLoops
 	{
+		static boolean playAgain=true;
 		static Scanner userInput= new Scanner(System.in);
+		static Scanner userInput2= new Scanner(System.in);
 		public static void main(String[] args)
 			{
-				System.out.println("Which Challenge would you like to run? (Type the number)");
+				do 
+				{
+				System.out.println("Which Challenge would you like to run? (Type a number 1-8)");
 				int userChoice=userInput.nextInt();
 				switch(userChoice)
 				{
@@ -15,7 +19,7 @@ public class forLoops
 						doChallengeTwo();
 						break;
 					case 3:
-						doChallengeTwo();
+						doChallengeThree();
 						break;
 					case 4:
 						doChallengeFour();
@@ -33,9 +37,12 @@ public class forLoops
 						doChallengeEight();
 						break;
 					default:
-						doChallenge1();
+						doChallengeOne();
 						break;
 				}
+				runAgain();
+				}
+				while(playAgain==true);
 
 
 
@@ -43,11 +50,6 @@ public class forLoops
 
 
 
-			}
-		private static void doChallenge1()
-			{
-				// TODO Auto-generated method stub
-				
 			}
 		public static void doChallengeOne()
 		{
@@ -131,6 +133,18 @@ public class forLoops
 					System.out.println("*       *");
 				}
 			System.out.println("*********");
+		}
+		public static void runAgain()
+		{
+			System.out.println("");
+			System.out.println("Would you like to run another challenge? (Type y/n for yes/no respectively)");
+			String userChoice= userInput2.nextLine();
+			if((userChoice.equals("N"))||(userChoice.equals("n")))
+			{
+			System.out.println("See you later!");
+			playAgain=false;
+			}
+			
 		}
 		
 
